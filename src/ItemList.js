@@ -11,13 +11,13 @@ const ItemList = (props) =>{
                     //console.log(itemList);
                     
                     return (
-                    <li>{item}</li>
+                    <li>{item.item}</li>
                 )
                 })}
             </ul>
 
             {/* this button will allow us to move item from ItemList to Packeditems */}
-            <button onClick={(item)=>props.addToPackedItems(item)}>
+            <button onClick={(item)=>props.addToPackedItems(item[1].item)}>
                Add to Packed Items
             </button>
         </section>

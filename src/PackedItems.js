@@ -7,9 +7,9 @@ const PackedItems = (props) =>{
             <h2 className='packed-item_h2'>Packed Items</h2>
             <ul>
                 {/* this is where the items from ItemList are going to go */}
-                {props.items.map((item)=>{
-                    return <li>{item}</li>
-                })}
+                {/* {props.packedItems.map((item)=>{
+                    return <li>{item[1].item}</li>
+                })} */}
 
             </ul>
         </section>

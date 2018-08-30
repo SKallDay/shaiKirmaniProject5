@@ -28,22 +28,35 @@ class App extends Component {
     // array
     console.log(itemsObject);
     const itemArray = Object.entries(itemsObject).map((item)=>{
+      console.log(item);
+      // this is returning the key of item and the item to us
       return({
-       // key:item[0],
-        item:item[0].item
+        key:item[0],
+        item:item[1].item
       })
     }) 
+    // this is setting the set to itemArray
   this.setState({
     itemList:itemArray
   });
                 
   } 
-  
+  // this is pushing to database 
   addItemToDatabase = (item) =>{
     dbRef.push({
       item: item
     })
   }
+  addToPackedItems = (item) =>{
+    console.log('working');
+    
+    const packedItems = Array.from(this.state.packedItems)
+
+    packedItems.push(item);
+
+    this.setState({item})
+    
+  }  
 
   render() {
     return (
