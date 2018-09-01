@@ -5,21 +5,27 @@ const ItemList = (props) =>{
     return(
         <section className="item-list">
             <h2 className="item-list__h2">Items to Pack</h2>
-            <ul>
+            
                 {/* UL to put items in here */}
                 {props.listOfItems.map((item)=>{
                     //console.log(itemList);
                     
                     return (
-                    <li>{item.item}</li>
+                    // this the containter that will hold input items
+                    <div>
+                            <label htmlFor="checkbox">{item.item}</label>
+                        <input type="checkbox" id="checkbox"
+                                checked={this.checked} onChange={()=>{props.movestuff(item)}
+                                } key={item}/>
+                    </div>
                 )
                 })}
-            </ul>
 
-            {/* this button will allow us to move item from ItemList to Packeditems */}
-            <button onClick={(item)=>props.addToPackedItems(item[1].item)}>
+
+            {/* this button will allow us to move item from ItemList to Packeditems
+            <button onClick={(item)=>props.addToPackedItems(item)}>
                Add to Packed Items
-            </button>
+            </button> */}
         </section>
     );
 }
