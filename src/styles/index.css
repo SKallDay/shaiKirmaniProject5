@@ -133,7 +133,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .wrapper {
   max-width: 1080px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border: 1px solid black; }
+
+header {
+  background: pink; }
+
+footer {
+  background: chartreuse; }
 
 body {
   margin: 0;

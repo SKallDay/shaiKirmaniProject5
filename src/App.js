@@ -98,18 +98,23 @@ class App extends Component {
  }
 
 clearAll = () => {
-  const clearingAll = firebase.database().ref(`2pack`)
-
-    clearingAll.set({pack:{}})
-    this.sortItems(clearingAll);
+  this.setState({
+    itemList: [],
+    message: 'Write Items here!'
+    
+  })
 }
 
-  clearAllPacked = () => {
-    const clearingAll = firebase.database().ref(`packed`)
+clearAllPacked = () => {
+  const packItemRef = firebase.database().ref(`packed`)
+  packItemRef.remove();
 
-    clearingAll.set({ pack: {} })
-    this.sortPackedItems(clearingAll);
+    this.setState({
+      packedItems: [],
+      message: 'No items have been packed'
+    })
   }
+
 
   render() {
     return (
@@ -117,6 +122,7 @@ clearAll = () => {
         <header className="App-header">
           <h1>Ready2Pack</h1>
           <h3> The App to help you pack</h3>
+          <i class="fas fa-suitcase"></i>
         </header>
         <section className="wrapper">
               <Form addItem={this.addItemToDatabase} />
@@ -125,6 +131,9 @@ clearAll = () => {
 
             <PackedItems items={this.state.packedItems} clear={this.clearAllPacked} />
         </section>
+        <footer>
+          <p>made S.Kirmani</p>
+        </footer>
       </div>
     );
   }
