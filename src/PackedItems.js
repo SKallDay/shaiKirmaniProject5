@@ -7,7 +7,7 @@ const PackedItems = (props) =>{
         <section className="packed-items_container">
             <h2 className='packed-item_h2'>Packed Items</h2>
                 {/* this is where the items from ItemList are going to go */}
-                {props.items.map((item)=>{
+                {props.items.length > 0 ? props.items.map((item)=>{
 
                     return(
                         <ul>
@@ -15,8 +15,12 @@ const PackedItems = (props) =>{
                         </ul>
                     )
 
-                })}
+                }): <p> Packed items</p>
+            }
 
+            <button onClick={() => props.clear()}>
+                clear
+            </button>
 
         </section>
     );

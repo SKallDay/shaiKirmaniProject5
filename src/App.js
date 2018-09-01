@@ -32,6 +32,7 @@ class App extends Component {
   sortItems = (itemsObject) =>{
     // this maps throught our item objects turns items into an 
     // array
+    if(itemsObject){
     console.log(itemsObject);
     const itemArray = Object.entries(itemsObject).map((item)=>{
       //console.log(item);
@@ -46,11 +47,12 @@ class App extends Component {
     itemList:itemArray
   });
                 
-  } 
-
+    } 
+  }
   sortPackedItems = (itemsObject) => {
     // this maps throught our item objects turns items into an 
     // array
+    if(itemsObject){
     console.log(itemsObject);
     const itemArray = Object.entries(itemsObject).map((item) => {
       //console.log(item);
@@ -65,8 +67,8 @@ class App extends Component {
       packedItems: itemArray
     });
 
-  } 
-
+    } 
+  }
   // this is pushing to database 
   addItemToDatabase = (item) =>{
     dbRef2pack.push({
@@ -93,22 +95,36 @@ class App extends Component {
    })
   const itemRef = firebase.database().ref(`2pack/${item.key}`)
   itemRef.remove();
-
-
  }
+
+clearAll = () => {
+  const clearingAll = firebase.database().ref(`2pack`)
+
+    clearingAll.set({pack:{}})
+    this.sortItems(clearingAll);
+}
+
+  clearAllPacked = () => {
+    const clearingAll = firebase.database().ref(`packed`)
+
+    clearingAll.set({ pack: {} })
+    this.sortPackedItems(clearingAll);
+  }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1>Ready2Pack</h1>
+          <h3> The App to help you pack</h3>
         </header>
-          <Form addItem={this.addItemToDatabase} />
+        <section className="wrapper">
+              <Form addItem={this.addItemToDatabase} />
 
-          <ItemList listOfItems={this.state.itemList} movestuff={this.moveToPackedItems} removeKey={this.removeKey}/>
+            <ItemList listOfItems={this.state.itemList} movestuff={this.moveToPackedItems} removeKey={this.removeKey} clear={this.clearAll} />
 
-          <PackedItems items={this.state.packedItems} />
-       
+            <PackedItems items={this.state.packedItems} clear={this.clearAllPacked} />
+        </section>
       </div>
     );
   }
