@@ -17,12 +17,12 @@ const ItemList = (props) =>{
                     // this the containter that will hold input items
                     <div className="itemList-container">
                         
-                        
+                        <div className="items-content">
                             <label className="checkbox-label" htmlFor="checkbox">{item.item}</label>
-                        <input type="checkbox" id="checkbox"
+                             <input type="checkbox" id="checkbox"
                                 checked={this.checked} onChange={()=>{props.movestuff(item)}
                                 } key={item}/>
-
+                        </div>        
                                
                     </div>
                 )

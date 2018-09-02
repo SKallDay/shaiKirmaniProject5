@@ -141,10 +141,10 @@ clearAllPacked = () => {
 
               <PackedItems items={this.state.packedItems} clear={this.clearAllPacked} />
           </div>
-          
+
         </section>
         <footer>
-          <p>made S.Kirmani</p>
+          <p>Made by Shai Kirmani 2018 &copy;</p>
         </footer>
       </div>
     );

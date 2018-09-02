@@ -10,9 +10,13 @@ const PackedItems = (props) =>{
                 {props.items.length > 0 ? props.items.map((item)=>{
 
                     return(
+                        <div className="items-content">
+                        
                         <ul>
-                            <li>{item.item}</li>
+                            <li className="packedItem-li">{item.item}</li>
                         </ul>
+
+                        </div>
                     )
 
             }) : <p className="list-p"> Packed Items Go Here !</p>

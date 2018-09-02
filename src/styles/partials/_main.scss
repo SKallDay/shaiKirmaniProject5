@@ -1,5 +1,5 @@
 .main-container{
-    height: 75vh;
+    height: 72vh;
     background:#5b5151;
     display: flex;
 }
@@ -22,7 +22,7 @@
     width: calc(50% - 40px);
     text-align: center;
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 8%;
     padding: 10px;
 }
 
@@ -83,4 +83,34 @@ input[type="checkbox"]{
 .list-p{
     font-size: 1.8rem;
     font-family: $primaryFont;
+}
+
+.items-content{
+    // border: 1px solid black;
+    margin: 10px;
+}
+
+.checkbox-label,
+.packedItem-li{
+    font-family: $primaryFont;
+    font-size: 1.5rem;
+}
+
+.packedItem-li{
+    padding: 0px;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+.list-button{
+    background: #39aea9;
+    border: none;
+    margin: 20px;
+    width: calc(80% - 40px);
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }

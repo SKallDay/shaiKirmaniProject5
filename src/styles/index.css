@@ -133,8 +133,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .wrapper {
   width: 1180px;
-  margin: 0 auto;
-  border: 1px solid black; }
+  margin: 0 auto; }
 
 html {
   font-size: 72.5%;
@@ -167,7 +166,7 @@ header {
   margin: 25px; }
 
 .main-container {
-  height: 75vh;
+  height: 72vh;
   background: #5b5151;
   display: flex; }
 
@@ -188,7 +187,7 @@ header {
   width: calc(50% - 40px);
   text-align: center;
   border: 1px solid black;
-  border-radius: 5%;
+  border-radius: 8%;
   padding: 10px; }
 
 .form-info {
@@ -237,7 +236,33 @@ input[type="checkbox"] {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif; }
 
+.items-content {
+  margin: 10px; }
+
+.checkbox-label,
+.packedItem-li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem; }
+
+.packedItem-li {
+  padding: 0px; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
+.list-button {
+  background: #39aea9;
+  border: none;
+  margin: 20px;
+  width: calc(80% - 40px);
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1.2rem; }
+
 footer {
-  background: chartreuse; }
+  background: #a2d5ab;
+  padding: 15px; }
   footer p {
-    margin: 0; }
+    margin: 0;
+    text-align: right; }
