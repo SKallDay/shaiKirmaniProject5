@@ -132,12 +132,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .wrapper {
-  width: 1080px;
+  width: 1180px;
   margin: 0 auto;
   border: 1px solid black; }
 
 html {
-  font-size: 62.5%;
+  font-size: 72.5%;
   color: black; }
 
 h1 {
@@ -168,23 +168,36 @@ header {
 
 .main-container {
   height: 76.5vh;
-  background: green; }
+  background: green;
+  display: flex; }
+
+.list-container {
+  flex: 1 0 45%;
+  display: flex; }
 
 .form-container {
-  background: #557b83;
+  background: #e5efc1;
   display: flex;
   padding: 20px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex: 0 0 55%; }
+
+.item-list,
+.packed-items_container {
+  margin: 20px;
+  width: calc(50% - 40px); }
 
 .form-info {
   flex: 1 2 75%;
-  padding-right: 20px; }
+  padding-right: 20px;
+  padding-top: 100px; }
 
 form {
   display: flex;
   flex-direction: column;
   flex: 0 1 25%;
-  margin: 20px; }
+  margin: 20px;
+  padding-top: 100px; }
 
 .label-checkbox {
   display: none;
@@ -196,7 +209,7 @@ form {
 
 #item {
   margin: 20px 0px;
-  padding: 10px 0px; }
+  padding: 10px 30px; }
 
 input::placeholder {
   text-align: center;

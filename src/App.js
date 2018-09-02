@@ -134,13 +134,14 @@ clearAllPacked = () => {
 
         {/*MAIN SECTION STARTS HERE */}
         <section className="main-container">
-            <div className="wrapper">
-              <Form addItem={this.addItemToDatabase} />
-
+          <Form addItem={this.addItemToDatabase} />
+            
+          <div className="list-container">
              <ItemList listOfItems={this.state.itemList} movestuff={this.moveToPackedItems} removeKey={this.removeKey} clear={this.clearAll} />
 
               <PackedItems items={this.state.packedItems} clear={this.clearAllPacked} />
           </div>
+          
         </section>
         <footer>
           <p>made S.Kirmani</p>
