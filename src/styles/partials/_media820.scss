@@ -1,0 +1,37 @@
+@media (max-width:820px){
+    .wrapper{
+        max-width: 740px;
+    }
+
+    h1{
+        margin: 15px;
+    }
+
+    .main-container{
+        height: inherit;
+    }
+
+    .header-p{
+        margin: 15px;
+    }
+
+    .main-container{
+        flex-direction: column;
+    }
+
+    .form-info{
+        text-align: center;
+        padding: 20px;
+    }
+
+    form{
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    .item-list, .packed-items_container{
+        margin: 14px;
+        width: calc(50% - 30px);
+        border-radius: 3%;
+    }
+}

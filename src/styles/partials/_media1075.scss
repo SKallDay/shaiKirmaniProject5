@@ -1,0 +1,28 @@
+@media (max-width: 1075px){
+.wrapper{
+    max-width: 850px;
+}
+
+.form-container{
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 0 0 40%;
+}
+
+.form-info{
+    padding: 30px;
+    padding-bottom: 10px;
+    flex: 0;
+}
+form{
+    padding-top:0px;
+    margin: 0;
+    flex: 0;
+}
+
+.list-container{
+    flex: 0 0 60%;
+}
+
+
+} 

@@ -88,7 +88,6 @@ class App extends Component {
   let itemKey = item.key
    const packedItems = []
 
-
     const newDbRef = firebase.database().ref(`packed`)
    newDbRef.push({
       item: item.item
@@ -97,13 +96,22 @@ class App extends Component {
   itemRef.remove();
  }
 
-clearAll = () => {
-  this.setState({
-    itemList: [],
-    message: 'Write Items here!'
-    
-  })
-}
+  clearAll = () => {
+    // const clearingAll = firebase.database().ref(`2pack`)
+
+    // clearingAll.set({ pack: {} })
+    // this.sortItems(clearingAll);
+
+    // const itemListItem = firebase.database().ref(`2pack`)
+    // itemListItem.remove();
+    this.setState({
+      itemList: [],
+      message: 'Write Items here!'
+
+    })
+
+
+  }
 
 clearAllPacked = () => {
   const packItemRef = firebase.database().ref(`packed`)

@@ -1,0 +1,27 @@
+@media(max-width:980px){
+    .header-p{
+        font-size: 1.5rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .form-p{
+        font-size: 1.4rem;
+    }
+
+    .form-container{
+        justify-content: inherit;
+        flex: 0 0 30%;
+    }
+
+    .form-info{
+        padding: 15px 5px;
+        padding-bottom: 0;
+    }
+
+    .list-container{
+        flex: 0 0 70%;
+    }
+}
