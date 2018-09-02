@@ -15,10 +15,10 @@ const ItemList = (props) =>{
                     
                     return (
                     // this the containter that will hold input items
-                    <div>
+                    <div className="itemList-container">
                         
                         
-                            <label htmlFor="checkbox">{item.item}</label>
+                            <label className="checkbox-label" htmlFor="checkbox">{item.item}</label>
                         <input type="checkbox" id="checkbox"
                                 checked={this.checked} onChange={()=>{props.movestuff(item)}
                                 } key={item}/>
@@ -27,11 +27,11 @@ const ItemList = (props) =>{
                     </div>
                 )
                 })
-                 : <p> add items here</p>
+                 : <p className="list-p"> No Items on List !</p>
             }
            
 
-            <button onClick={()=>props.clear()}>
+            <button className="list-button" onClick={()=>props.clear()}>
                 clear
             </button>
             {/* this button will allow us to move item from ItemList to Packeditems

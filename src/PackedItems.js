@@ -15,10 +15,10 @@ const PackedItems = (props) =>{
                         </ul>
                     )
 
-                }): <p> Packed items</p>
+            }) : <p className="list-p"> Packed Items Go Here !</p>
             }
 
-            <button onClick={() => props.clear()}>
+            <button className="list-button" onClick={() => props.clear()}>
                 clear
             </button>
 
