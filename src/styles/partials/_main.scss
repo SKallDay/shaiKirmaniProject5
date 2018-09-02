@@ -1,0 +1,53 @@
+.main-container{
+    height: 76.5vh;
+    background:green;
+}
+
+.form-container{
+    background: #557b83;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.form-info{
+    flex: 1 2 75%;
+    padding-right: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    flex:0 1 25%;
+    margin: 20px;
+}
+
+.label-checkbox{
+    display: none;
+    margin: 10px;
+}
+
+.form-p{
+    font-size: 1.6rem;
+    font-family: $primaryFont;
+}
+
+#item{
+    margin: 20px 0px;
+    padding: 10px 0px;
+}
+
+input::placeholder{
+    text-align: center;
+    font-size: 1.9rem;
+    font-family: $primaryFont;
+}
+
+
+#submit{
+    padding: 8px;
+    font-size: 1.2rem;
+    background: #39aea9;
+    border: none;
+    text-transform: uppercase;
+}

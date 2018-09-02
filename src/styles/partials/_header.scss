@@ -1,3 +1,16 @@
 header{
-    background: pink;
+    background:$background;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+
+.fa-suitcase{
+    font-size: 8rem;
+    margin: 25px;
+    
 }

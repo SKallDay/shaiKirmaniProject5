@@ -119,17 +119,28 @@ clearAllPacked = () => {
   render() {
     return (
       <div className="App">
+      {/* HEADER STARTS HERE */}
         <header className="App-header">
-          <h1>Ready2Pack</h1>
-          <h3> The App to help you pack</h3>
-          <i class="fas fa-suitcase"></i>
+          <div className="wrapper">
+            <div className="header-container">
+                <div className="head-content">
+                  <h1>Ready2Pack</h1>
+                  <p className="header-p"> A great application that can help you pack for your next Adventure</p>
+                </div>
+                <i class="fas fa-suitcase"></i>
+            </div>
+            </div>
         </header>
-        <section className="wrapper">
+
+        {/*MAIN SECTION STARTS HERE */}
+        <section className="main-container">
+            <div className="wrapper">
               <Form addItem={this.addItemToDatabase} />
 
-            <ItemList listOfItems={this.state.itemList} movestuff={this.moveToPackedItems} removeKey={this.removeKey} clear={this.clearAll} />
+             <ItemList listOfItems={this.state.itemList} movestuff={this.moveToPackedItems} removeKey={this.removeKey} clear={this.clearAll} />
 
-            <PackedItems items={this.state.packedItems} clear={this.clearAllPacked} />
+              <PackedItems items={this.state.packedItems} clear={this.clearAllPacked} />
+          </div>
         </section>
         <footer>
           <p>made S.Kirmani</p>

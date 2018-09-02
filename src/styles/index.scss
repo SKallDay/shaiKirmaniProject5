@@ -1,14 +1,8 @@
 @import 'partials/setup';
 @import 'partials/layout';
-@import 'partials/header';
 @import 'partials/fontsAndVars';
+@import 'partials/header';
+@import 'partials/main';
 @import 'partials/footer';
 
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  color: red;
-}
- 

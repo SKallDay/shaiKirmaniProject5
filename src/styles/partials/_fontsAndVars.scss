@@ -1,4 +1,32 @@
 $primaryFont: 'Montserrat', sans-serif;
-
 $secondaryFont:'Yeseva One', serif;
 
+$background:#a2d5ab;
+$white:white;
+$black: black;
+
+
+
+html{
+    font-size: 62.5%;
+    color: $black;
+}
+
+
+h1{
+    font-size: 4rem;
+    font-family: $secondaryFont;
+    
+}
+
+.header-p{
+    font-size: 1.7rem;
+    font-weight: 400px;
+    font-family: $primaryFont;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-family: $secondaryFont;
+    margin: 0;
+}
