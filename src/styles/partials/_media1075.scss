@@ -5,19 +5,23 @@
 
 .form-container{
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: inherit;
     flex: 0 0 40%;
 }
 
 .form-info{
     padding: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
     flex: 0;
 }
 form{
     padding-top:0px;
     margin: 0;
     flex: 0;
+}
+
+#submit{
+    padding: 20px;
 }
 
 .list-container{

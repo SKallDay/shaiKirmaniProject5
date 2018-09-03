@@ -1,0 +1,36 @@
+@media(max-width:460px){
+
+    .wrapper{
+        max-width: 200px;
+    }
+    
+    .header-p{
+        display: none;
+    }
+    .fa-suitcase{
+        font-size: 4rem;
+    }
+
+    .form-info{
+        padding: 0px;
+    }
+
+    .form-p{
+        display: none;
+    }
+
+    .fa-arrow-circle-down{
+       display: block;
+       margin: 20px;
+       font-size: 3rem;
+   }
+
+   .list-container{
+       flex-direction: column;
+   }
+
+   .item-list, .packed-items_container{
+       width: calc(100% - 30px);
+       border-radius:2%;
+   }
+}

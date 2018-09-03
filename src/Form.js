@@ -35,6 +35,8 @@ class Form extends Component{
                     </p>
 
                     <p className="form-p">Time for another adventure ? Clear button resets lists, you can start you new items like for your new trip!</p>
+
+                    <i class="fas fa-arrow-circle-down"></i>
                 </div>
                 <form onSubmit={this.handleSumbit}>
                     
