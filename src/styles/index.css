@@ -243,7 +243,7 @@ input[type="checkbox"] {
 .items-content {
   margin: 10px; }
 
-.checkbox-label,
+.itemList-li,
 .packedItem-li {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem; }

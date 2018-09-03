@@ -85,8 +85,8 @@ class App extends Component {
   // this is adding item differnt array packed items
  moveToPackedItems = (item) =>{
    console.log(item.key);
-  let itemKey = item.key
-   const packedItems = []
+  // let itemKey = item.key
+  //  const packedItems = []
 
     const newDbRef = firebase.database().ref(`packed`)
    newDbRef.push({

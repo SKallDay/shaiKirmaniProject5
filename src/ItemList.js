@@ -18,10 +18,15 @@ const ItemList = (props) =>{
                     <div className="itemList-container">
                         
                         <div className="items-content">
-                            <label className="checkbox-label" htmlFor="checkbox">{item.item}</label>
+                            {/* <label className="checkbox-label" htmlFor="checkbox">{item.item}</label>
                              <input type="checkbox" id="checkbox"
                                 checked={this.checked} onChange={()=>{props.movestuff(item)}
-                                } key={item}/>
+                                } key={item}/> */}
+                                <ul>
+                                    <li className="itemList-li" onClick={() => { props.movestuff(item) }} key={item}>
+                                        {item.item}
+                                    </li>
+                                </ul>
                         </div>        
                                
                     </div>
