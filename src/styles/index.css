@@ -380,8 +380,6 @@ footer {
     display: block;
     margin: 20px;
     font-size: 3rem; }
-  input::placeholder {
-    display: none; }
   .list-container {
     flex-direction: column; }
   .item-list, .packed-items_container {
