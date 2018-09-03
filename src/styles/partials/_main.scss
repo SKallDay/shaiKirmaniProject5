@@ -16,7 +16,7 @@
     justify-content: space-between;
     flex: 0 0 50%;
 }
-
+   
 .item-list,
 .packed-items_container{
     margin: 20px;
@@ -63,6 +63,10 @@ form{
     padding: 10px 30px;
 }
 
+input{
+    text-align: center;
+}
+
 input::placeholder{
     text-align: center;
     font-size: 1.9rem;
@@ -96,7 +100,6 @@ input[type="checkbox"]{
     margin: 10px;
 }
 
-// .checkbox-label,
 .itemList-li,
 .packedItem-li{
     font-family: $primaryFont;

@@ -35,7 +35,6 @@ class App extends Component {
     if(itemsObject){
     console.log(itemsObject);
     const itemArray = Object.entries(itemsObject).map((item)=>{
-      //console.log(item);
       // this is returning the key of item and the item to us
       return({
         key:item[0],
@@ -55,7 +54,6 @@ class App extends Component {
     if(itemsObject){
     console.log(itemsObject);
     const itemArray = Object.entries(itemsObject).map((item) => {
-      //console.log(item);
       // this is returning the key of item and the item to us
       return ({
         key: item[0],
@@ -85,8 +83,6 @@ class App extends Component {
   // this is adding item differnt array packed items
  moveToPackedItems = (item) =>{
    console.log(item.key);
-  // let itemKey = item.key
-  //  const packedItems = []
 
     const newDbRef = firebase.database().ref(`packed`)
    newDbRef.push({
@@ -97,13 +93,7 @@ class App extends Component {
  }
 
   clearAll = () => {
-    // const clearingAll = firebase.database().ref(`2pack`)
-
-    // clearingAll.set({ pack: {} })
-    // this.sortItems(clearingAll);
-
-    // const itemListItem = firebase.database().ref(`2pack`)
-    // itemListItem.remove();
+  
     this.setState({
       itemList: [],
       message: 'Write Items here!'
