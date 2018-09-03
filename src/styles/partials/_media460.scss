@@ -25,6 +25,10 @@
        font-size: 3rem;
    }
 
+   input::placeholder{
+       display: none;
+   }
+
    .list-container{
        flex-direction: column;
    }
