@@ -166,6 +166,7 @@ header {
   margin: 25px; }
 
 .main-container {
+  height: 75vh;
   background: #5b5151;
   display: flex;
   flex: 2 0 100%; }
