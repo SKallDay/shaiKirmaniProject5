@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
+
+
 
 class Form extends Component{
     constructor(){
@@ -17,24 +20,31 @@ class Form extends Component{
     handleSumbit = (e) =>{
         e.preventDefault();
         console.log(this.props);
-        
+        //  this.setState({
+        //     item:''
+        // })
+        if(!this.state.item){
+            return swal("Hey!", "I think you forgot to an an Item", "error");
+        } else{
+           this.setState({
+               item:''
+           })
+        }
         this.props.addItem(this.state.item);
 
-        this.setState({
-            item:''
-        })
     }
+
     render(){
         return(
             <div className="form-container">
                 <div className="form-info">
-                    <h2>Add your Items here</h2>
+                    <h2 className='form-h2'>Add your Items here</h2>
                     <p className="form-p">
                         When you have packed your items.
-                        Clicked the itemslist and move them to packed Items to remind you what you've already got in your suitcase !
+                        Click them from the itemslist and move them to packed Items to remind you what you've already got in your suitcase !
                     </p>
 
-                    <p className="form-p">Time for another adventure ? Clear button resets lists, you can start you new items like for your new trip!</p>
+                    <p className="form-p">Time for another adventure ? Press the Clear button to resets lists, you can start adding some items for your new trip!</p>
 
                     <i class="fas fa-arrow-circle-down"></i>
                 </div>

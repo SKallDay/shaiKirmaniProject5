@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import firebase from './firebase'
+import swal from 'sweetalert';
+
+
 
 //COMPONENTS
 import Form from './Form'
@@ -93,13 +96,11 @@ class App extends Component {
  }
 
   clearAll = () => {
-  
     this.setState({
       itemList: [],
       message: 'Write Items here!'
-
-    })
-
+   }) 
+    return swal("Good job!", "Moved to packed Items", "success");
 
   }
 
@@ -107,10 +108,12 @@ clearAllPacked = () => {
   const packItemRef = firebase.database().ref(`packed`)
   packItemRef.remove();
 
+
     this.setState({
       packedItems: [],
       message: 'No items have been packed'
     })
+    return swal("All packed!", "Have a Great Trip", "success");
   }
 
 
