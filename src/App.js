@@ -100,6 +100,8 @@ class App extends Component {
       itemList: [],
       message: 'Write Items here!'
    }) 
+    const toPackItemRef = firebase.database().ref(`2pack`);
+    toPackItemRef.remove();
     return swal("Good job!", "Moved to packed Items", "success");
 
   }
